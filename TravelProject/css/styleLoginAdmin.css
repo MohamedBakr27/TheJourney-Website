@@ -1,0 +1,308 @@
+* {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+#form_body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+}
+body{
+    min-height: 85vh;
+    background: #232421;
+}
+#box
+{
+    position: absolute;
+    width: 380px;
+    height: 460px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+#box::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background: linear-gradient(0deg,transparent,#70f6ac,#70f6ac);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+#box::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background: linear-gradient(0deg,transparent,#70f6ac,#70f6ac);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+#form
+{
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: #28292d;
+    z-index: 10;
+    padding:50px 40px;
+    display: flex;
+    flex-direction: column;
+}
+#form h2
+{
+    color: #70f6ac;
+    font-weight: 500;
+    text-align: center;
+    transition: 0.3s;
+    font-size: 28px;
+    letter-spacing: 0.1em;
+}
+#form:hover h2
+{
+    color: #57ca8b;
+    transition: 0.3s;
+    letter-spacing: 0.15em;
+}
+.inputElement
+{
+    position: relative;
+    width: 300px;
+    margin-top: 40px;
+}
+.inputElement input
+{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color:#23242a;
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+.inputElement span
+{
+    position: absolute;
+    left:0;
+    padding: 20px 10px 10px;
+    font-size: 1.6em;
+    color:#8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transform: translateY(-56px);
+    transition: 0.5s;
+}
+.inputElement input:valid ~ span,
+.inputElement input:focus ~ span
+{
+    color: #70f6ac;
+    transform: translateX(-10px) translateY(-90px);
+    font-size:1.2em;
+}
+.inputElement i
+{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width:100%;
+    height: 2px;
+    background: #63d395;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+.inputElement:hover i
+{
+    background: #70f6ac;
+}
+.inputElement input:valid ~ i,
+.inputElement input:focus ~ i
+{
+    height: 44px;
+}
+.loginClick
+{
+    border:none;
+    outline: none;
+    background: #63d395;
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: center;
+    transform: translateY(+5px);
+    transition: .3s;
+}
+.loginClick:hover
+{
+    background: #70f6ac;
+    align-self: center;
+    transition: .3s;
+}
+.tit{
+    text-align: center;
+    transform: translateY(+20px);
+    color: #ddd;
+    transition: .5s;
+}
+.tit:hover{
+    text-align: center;
+    transform: translateY(+20px);
+    transition: 1s;
+    color: #719481;
+    word-spacing: 15px;
+    letter-spacing: 5px;
+}
+@media (max-width: 380px) {
+    .form_body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 85vh;
+    }
+
+    body {
+        min-height: 100vh;
+        background: #ddd;
+    }
+
+    .box {
+        position: absolute;
+        width: 340px;
+        height: 460px;
+        background: #1c1c1c;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+        .box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 340px;
+            height: 420px;
+            background: linear-gradient(0deg,transparent,#70c4f6,#70c4f6);
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+        }
+
+        .box::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 340px;
+            height: 420px;
+            background: linear-gradient(0deg,transparent,#70c4f6,#70c4f6);
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+            animation-delay: -3s;
+        }
+
+    .form {
+        position: absolute;
+        inset: 2px;
+        border-radius: 8px;
+        background: #28292d;
+        z-index: 10;
+        padding: 50px 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .form h2 {
+            color: #70c4f6;
+            font-weight: 500;
+            text-align: center;
+            font-size: 28px;
+            letter-spacing: 0.1em;
+        }
+
+    .inputElement {
+        position: relative;
+        width: 260px;
+        margin-top: 40px;
+    }
+
+        .inputElement input {
+            position: relative;
+            width: 100%;
+            padding: 20px 10px 10px;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #23242a;
+            font-size: 1.8em;
+            letter-spacing: 0.05em;
+            z-index: 10;
+        }
+
+        .inputElement span {
+            position: absolute;
+            left: 0;
+            padding: 20px 10px 10px;
+            font-size: 1.6em;
+            color: #8f8f8f;
+            pointer-events: none;
+            letter-spacing: 0.05em;
+            transition: 0.5s;
+        }
+
+        .inputElement input:valid ~ span,
+        .inputElement input:focus ~ span {
+            color: #70c4f6;
+            transform: translateX(-10px) translateY(-34px);
+            font-size: 1.2em;
+        }
+
+        .inputElement i {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: #4983a5;
+            border-radius: 4px;
+            transition: 0.5s;
+            pointer-events: none;
+            z-index: 9;
+        }
+
+        .inputElement:hover i {
+            background: #70c4f6;
+        }
+
+        .inputElement input:valid ~ i,
+        .inputElement input:focus ~ i {
+            height: 44px;
+        }
+}

@@ -1,0 +1,603 @@
+/* Font family */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* root variables */
+
+:root {
+    --color-primary: #7380cc;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #23242a;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #ddd;
+
+    --card_border_radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem #18181f2e;
+
+}
+
+/* Start General Styles */
+* {
+    transition: .3s;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    appearance: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.88rem;
+    font-family: poppins, sans-serif;
+    background-color: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+
+.container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 22rem;
+}
+
+a {
+    color: var(--color-dark);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: .87rem;
+}
+
+h4 {
+    font-size: .8rem;
+}
+
+h5 {
+    font-size: .77rem;
+}
+
+small {
+    font-size: .85rem;
+}
+
+.profile-photo {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted {
+    color: var(--color-info-dark);
+}
+
+p {
+    color: var(--color-dark-variant);
+}
+
+b {
+    color: var(--color-dark);
+}
+
+.primary {
+    color: var(--color-primary);
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.success {
+    color: var(--color-success);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+/* End General Styles */
+
+/* Satrt aside */
+
+aside {
+    height: 100vh;
+
+}
+/* #################### TOP #################### */
+aside .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.4rem;
+}
+
+aside .top .logo {
+    display: flex;
+    gap: 0.8rem;
+}
+
+aside .top .logo h2 {
+    font-size: 1.8rem;
+}
+
+aside .top img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+aside .top .close {
+    display: none;
+}
+
+/* ################# SIDEBAR ################### */
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    position: relative;
+    height: 3.7rem;
+    align-items: center;
+}
+
+aside .sidebar a:hover{
+    color: var(--color-primary);
+}
+
+aside .sidebar a:hover i {
+    margin-left: 1rem;
+}
+
+aside .sidebar a:last-child {
+    position: absolute;
+    width: 100%;
+    bottom: 1rem;
+}
+
+aside .sidebar a.active {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    margin-left: 0;
+}
+
+aside .sidebar a.active i {
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a.active:before {
+    content: "";
+    width: 6px;
+    height: 100%;
+    background-color: var(--color-primary);
+
+}
+
+aside .sidebar a i {
+    font-size: 1.6rem;
+}
+
+aside .sidebar .message-count {
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    padding: 2px 10px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+aside h3 {
+    font-weight: 500;
+}
+
+
+/* End aside */
+
+/* ############# Main ############# */
+main {
+    margin-top: 1.4rem;
+}
+
+main .insights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+main .insights > div {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card_border_radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+main .insights > div:hover {
+    box-shadow: none;
+}
+
+main .insights > div i {
+    background: var(--color-primary);
+    padding: 0.7rem;
+    color: var(--color-white);
+    border-radius: 50%;
+    font-size: 2rem;
+}
+main .insights > div.earning i {
+    background: var(--color-danger);
+}
+main .insights > div.destination i {
+    background: var(--color-success);
+}
+
+main .insights > div .middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights h3 {
+    margin:  1rem 0 0.6rem;
+    font-size: 1rem;
+}
+
+main .insights small {
+    margin-top: 1.3rem;
+    display: block;
+}
+
+/* ############ RECENT Reservations ############# */
+main .recent-reservations {
+    margin-top: 2rem;
+}
+
+main .recent-reservations h2 {
+    color: var(--color-dark);
+    margin-bottom: 0.8rem;
+}
+
+main .recent-reservations table {
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card_border_radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+main .recent-reservations table:hover {
+    box-shadow: none;
+}
+
+main .recent-reservations table thead th{
+    font-size: 1.1rem;
+}
+
+main table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+    font-size: 1.0rem;
+
+}
+
+main table tbody td.primary {
+    cursor: pointer;
+}
+
+main table tbody tr:last-child td{
+    border: none;
+}
+
+main .recent-reservations a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+/* ############ RIGHT ##################### */
+
+.right {
+    margin-top: 1.4rem;
+}
+
+.right .top {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right .top a {
+    display: none;
+}
+
+.right .top .profile {
+    display: flex;
+    gap: 2rem;
+    justify-content: right;
+}
+
+.right .top .profile .info {
+    position: relative;
+}
+
+.right .top .profile .info small {
+    position: absolute;
+    right: 0;
+}
+
+/* ############### RECENT UPDATES ################### */
+
+.right .recent-updates {
+    margin-top: 1rem;
+}
+
+.right .recent-updates h2 {
+    color: var(--color-dark);
+    margin-bottom: 0.8rem;
+}
+
+.right .recent-updates .updates {
+    background-color: var(--color-white);
+    border-radius: var(--card_border_radius);
+    padding: var(--card-padding);
+    box-shadow: var(--box-shadow);
+}
+
+.right .recent-updates .updates:hover {
+    box-shadow: none;
+}
+
+.right .recent-updates .updates .update {
+    display: grid;
+    grid-template-columns: 2.6rem auto;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* ############### MEDIA QUERIES ############# */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 94%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+
+    aside .logo h2 {
+        display: none;
+    }
+
+    aside .sidebar h3 {
+        display: none;
+    }
+
+    aside .sidebar a {
+        width: 5.6rem;
+    }
+
+    aside .sidebar a:last-child {
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+    main .insights {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    main .recent-reservations {
+        width: 94%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        margin: 2rem 0 0 8.8rem;
+    }
+    
+    main .recent-reservations table {
+        width: 83vw;
+    }
+    
+    main .recent-reservations table thead tr th:nth-child(2),
+    main .recent-reservations table thead tr th:nth-child(5) {
+        display: none;
+    }
+    
+    main .recent-reservations table tbody tr td:nth-child(2),
+    main .recent-reservations table tbody tr td:nth-child(5) {
+        display: none;
+    }
+    
+}
+
+/* ############### MEDIA QUERIES ############# */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    
+    aside {
+        position: fixed;
+        left: -100%;
+        background-color: #ddd;
+        width: 18rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        padding-right: var(--card-padding);
+        display: none;
+        animation: ShowMenu 400ms ease forwards;
+    }
+
+    /* Animation sliding in */
+    @keyframes ShowMenu {
+        to {
+            left: 0;
+        }
+    }
+    aside .logo {
+        margin-left: 1rem;
+    }
+
+    aside .logo h2 {
+        display: inline;
+    }
+
+    aside .sidebar h3 {
+        display: inline;
+    }
+
+    aside .sidebar a {
+        width: 100%;
+        height: 3.4rem;
+    }
+
+    aside .sidebar a:last-child {
+        position: absolute;
+        bottom: 5rem;
+    }
+
+    aside .top .close {
+        font-size: 1.7rem;
+        display: block;
+        cursor: pointer;
+    }
+
+    main {
+        margin-top: 8rem;
+        padding:  0 1rem;
+    }
+
+    main .recent-reservations {
+        position: relative;
+        margin: 3rem 0 0;
+        width: 100%;
+    }
+
+    main .recent-reservations table {
+        width: 100%;
+        margin: 0;
+    }
+
+    .right {
+        width: 94%;
+        margin:  0 auto 4rem;
+    }
+
+    .right .top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding: 0 0 0.8rem;
+        height: 4.6rem;
+        background-color: #ddd;
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+    }
+
+    .right .profile .info {
+        display: none;
+    }
+
+    .right .top a {
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
+
+    .right .top a i {
+        font-size: 2rem;
+    }
+}
+html::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background-color: #fff9;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background-color: #2b003d;
+  }
+
+/* Dark */
+body.dark{background: #23242a;}
+body.dark main .insights > div{background:#1a1a1f;color:#fff;}
+body.dark h1{color:#fff;}h2{color:#fff;}
+body.dark main .recent-reservations h2 {color:#fff}
+body.dark .right .recent-updates h2 {color: #fff;}
+body.dark .eH3{color:#fff;}
+body.dark .container .top .logo{background:#23242a;color:#ddd;}
+body.dark aside .top .close{color:#ddd}
+body.dark .right .top a{color:#ddd;}
+body.dark .container .sidebar{background:#23242a;color:#ddd;} 
+body.dark main .recent-reservations table{background:#1a1a1f;color:#fff;}
+body.dark .right .top{background:#23242a;color:#ddd;}
+body.dark aside{background:#23242a;color:#ddd;} 
+body.dark .info p b{color:#fff;}
+body.dark .updates .update{background:#1a1a1f;color:#fff;}
+body.dark .right .recent-updates .updates{background:#1a1a1f;color:#fff;} 
+body.dark .updates .update .message p b{color:#fff;}
+
+
+.warn {
+    font-size: 30px;
+    color: #23242a;
+}
+body.dark .warn {
+    color: #fff;
+}

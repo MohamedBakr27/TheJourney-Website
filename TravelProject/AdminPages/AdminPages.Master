@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminPages.master.cs" Inherits="TravelProject.AdminPages.AdminPages" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="../css/all.min.css"/>
+    <!-- Our CSS File -->
+    <asp:ContentPlaceHolder ID="style" runat="server"></asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="../css/goUpStyle.css"/>
+    <title><asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="../img/logo.png" alt="website's logo"/>
+                    <h2>Admin<span class="danger"> Page</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </div>
+            </div>
+            <div class="sidebar">
+                <asp:ContentPlaceHolder ID="navbarActive" runat="server"></asp:ContentPlaceHolder>
+                <hr style="height:15px;"/>
+                <asp:LinkButton  ID="mode" style="cursor: pointer;transform: translateY(+35px);" class="sub-menu-link" runat="server" OnClick="mode_Click">
+                    <i class="fa-solid fa-moon"></i>
+                    <h3>Dark Mode</h3>
+                  </asp:LinkButton>
+                <asp:HyperLink NavigateUrl="../LoginAndRegisterPages/LoginAdmin.aspx" ID="HyperLink1" runat="server">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <h3>Log out</h3>
+                </asp:HyperLink>
+            </div>
+        </aside>
+        <!-- End Of Aside -->
+        <!-- Start Main section -->
+        <asp:ContentPlaceHolder ID="body" runat="server"></asp:ContentPlaceHolder>
+        <!-- End Main section -->
+        <div class="right">
+            <div class="top">
+                <a id="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Mohamed Bakr</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="../img/me.jpg" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top -->
+            <div class="recent-updates">
+                <h2>Recent Updates</h2>
+                <asp:Panel class="updates" ID="updts" runat="server">
+                </asp:Panel>
+            </div>
+            <!-- End OF RECENT UPDATES -->
+        </div>
+    </div>
+        <span class="up"><i class="fa-solid fa-arrow-up"></i></span>
+        <asp:ContentPlaceHolder ID="script" runat="server"></asp:ContentPlaceHolder>
+        <script src="../js/darkModeScriptAdmin.js"></script>
+    <script src="../js/goUpScript.js"></script>
+    </form>
+</body>
+</html>

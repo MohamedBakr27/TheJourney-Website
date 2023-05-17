@@ -1,0 +1,99 @@
+body{
+    background: #ccc;
+  }
+  
+input[type="file"]{
+    display: none;
+}
+label{
+    color: black;
+    height: 25%;
+    width: 100%;
+    background-color: #d8d8d8;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+label:hover{
+    color: #ccc;
+    background-color: black;
+    transition: .3s;
+} 
+
+
+.container{
+    width: 70%;
+    margin: 30px auto;
+    align-items: center;
+    justify-content: center;
+    height: 69%;
+    background: #bbb;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.cap-area{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background: #d8d8d8;
+    margin: 30px 0 0 ;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cap-area h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px;
+    padding: 10px;
+}
+
+.cap-area textarea{
+    justify-content: first baseline;
+    display: block;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    width: 95%;
+    height: 95%;
+    background-color: #d8d8d8;
+    resize: none;
+    
+}
+.submit{
+    font-size: 18px;
+    margin: 30px auto 0;
+    justify-content: center;
+    padding: 25px;
+    width: 20%;
+    height: 10% ;
+    align-items: center;
+    display: flex;
+    border-radius: 20px;
+    font-weight: 600;
+    background: #d8d8d8;
+
+}
+.submit:hover{
+    color: #d8d8d8;
+    background-color: black;
+    transition: .3s;
+}
+
+  /* Dark mode */
+
+body.dark .topnav{background: #23242a;}
+body.dark .topnav a{color:#ddd;}
+body.dark .topnav a:hover{color: rgb(169, 104, 186);}
+body.dark .container{background: #363842;}

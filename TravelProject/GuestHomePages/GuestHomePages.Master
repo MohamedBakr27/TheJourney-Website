@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GuestHomePages.Master.cs" Inherits="TravelProject.GuestHomePages.UserHomePages" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder></title>
+    <!-- Swiper css link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- Font awesome cdn link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <!-- Custom Style Sheet -->
+    <asp:ContentPlaceHolder ID="styles" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Start Header -->
+    <section id="header">
+      <a href="Home.aspx"><img style="border-radius:50%;width:44px;" src="../img/webLogo.png"/></a>
+      <div>
+        <nav id="navbar">
+            <asp:ContentPlaceHolder ID="navbarActive" runat="server"></asp:ContentPlaceHolder>
+        </nav>
+      </div>
+      <div class="user__icon">
+        <img src="../img/user.jpg" class="use-pic" onclick="toggleMenu()"/>
+        <div class="sub-menu-wrab" id="subMenu">
+          <div class="sub-menu">
+            <a href="../LoginAndRegisterPages/Login.aspx" class="sub-menu-link">
+              <i class="fas fa-sign-in-alt"></i>
+              <p>Login</p>
+              <span>></span>
+            </a>
+            <a href="../LoginAndRegisterPages/Register.aspx" class="sub-menu-link">
+              <i class="fas fa-user-plus"></i>
+              <p class="ed">Register</p>
+              <span class="ed">></span>
+            </a>
+            <asp:LinkButton  ID="mode" style="cursor:pointer;" class="sub-menu-link" runat="server" OnClick="mode_Click">
+                <i class="fas fa-moon"></i>
+                <p id="darkModeBut" >Dark Mode</p>
+                <span>></span>
+            </asp:LinkButton>
+          </div>
+        </div>
+    </div>
+    <div id="menu-btn" class="fas fa-bars">
+    </div>
+    </section>
+    <!-- End Header -->
+        <asp:ContentPlaceHolder ID="body" runat="server"></asp:ContentPlaceHolder>
+    
+    <!-- Start Footer -->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Quick links</h3>
+          <a href="Home.aspx"><i class="fas fa-angle-right"></i>Home</a>
+          <a href="About.aspx"><i class="fas fa-angle-right"></i>About</a>
+          <a href="../LoginAndRegisterPages/Login.aspx"><i class="fas fa-angle-right"></i>Contact</a>
+        </div>
+        <div class="box">
+          <h3>Extra links</h3>
+          <a href="../LoginAndRegisterPages/Login.aspx"><i class="fas fa-angle-right"></i> Ask questions</a>
+          <a href="About.aspx"><i class="fas fa-angle-right"></i> About us</a>
+          <a href="About.aspx"><i class="fas fa-angle-right"></i> Privacy policy</a>
+          <a href="About.aspx"><i class="fas fa-angle-right"></i> Terms of use</a>
+        </div>
+        <div class="box">
+          <h3>Contact info</h3>
+          <a href="#"><i class="fas fa-phone"></i>phone</a>
+          <a href="#"><i class="fas fa-phone"></i>phone</a>
+          <a href="#"><i class="fas fa-envelope"></i>email</a>
+          <a href="#"><i class="fas fa-map"></i>map</a>
+        </div>
+        <div id="box3" class="box">
+          <h3>Follow us</h3>
+          <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
+          <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+          <a href="#"><i class="fab fa-instagram"></i> instagram</a>
+          <a href="#"><i class="fab fa-linkedin"></i> linkedin</a>
+        </div>
+      </div>
+      <div class="credit">Created by <a href="../Portoflio.aspx"><span>Paradox Team</span></a> | all rights reserved!</div>
+    </section>
+    <!-- End Footer -->
+    <!-- Swiper js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Custom Js file -->
+        <span class="up"><i class="fas fa-arrow-up"></i></span>
+        <asp:ContentPlaceHolder ID="scripts" runat="server"></asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

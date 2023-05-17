@@ -1,0 +1,31 @@
+/* Scroll up button */
+
+
+.up {
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    position: fixed;
+    bottom: 10px;
+    right: -50px;
+    background-color: #7380cc;
+    color: #dce1eb;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.2s;
+
+}
+
+.up.show {
+    right:10px;
+}
+
+.up i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

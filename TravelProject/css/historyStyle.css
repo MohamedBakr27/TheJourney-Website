@@ -1,0 +1,93 @@
+
+
+* {
+
+  font-size: 1.5rem;
+
+}
+body{
+  background: #ccc;
+}
+
+
+.topnav {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  top: 0;
+}
+  
+  .topnav a {
+    
+    color: #232121;
+    text-align: center;
+    padding: 13px 16px;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  .topnav a:hover {
+    color: rgb(169, 104, 186);
+  }
+
+/* end nav */
+
+.table-container {
+    margin:auto;
+    margin-top: 2%;
+    width: 90%;
+
+  }
+  
+  .table-container h2.table-heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+  }
+  
+  .table-container table {
+    width: 100%;
+    background: #fff;
+    color: #222;
+    padding: 24px;
+    box-shadow: 0 4px 15px -8px rgba(0, 0, 0, 0.4);
+    border-collapse: collapse;
+  }
+  
+  .table-container table thead tr {
+    background: #222;
+    color: #ccc;
+  }
+  
+  .table-container table td,
+  .table-container table th {
+    padding: 16px 32px;
+    text-align: center;
+  }
+  
+  .table-container table tr {
+    border-bottom: 1px solid #eee;
+  }
+  
+
+  /* Dark mode */
+
+body.dark .topnav{background: #23242a;}
+body.dark .topnav a{color:#ddd;}
+body.dark .topnav a:hover{color: rgb(169, 104, 186);}
+body.dark .table-container h2.table-heading{color:#ddd;}
+
+body.dark #warn {
+    color: #fff;
+}
+
+#warn {
+    font-size: 30px;
+    color: #23242a;
+}
