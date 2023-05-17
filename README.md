@@ -20,20 +20,20 @@ Features:
 3) Interact process between users and each other.
 4) Take recommendations from other users shots from feed page.
 
-Tools:
--Front End:
---HTML
---CSS
---JavaScript
--Back End:
---ASP.NET Web Forms.
---C#
+Tools:\
+-Front End:\
+--HTML\
+--CSS\
+--JavaScript\
+-Back End:\
+--ASP.NET Web Forms.\
+--C#\
 --Microsoft SQL Server for Database.
 
 Team:
-Mohamed Bakr (Leader, Full Stack Developer, Database Developer). GitHub: https://github.com/mohamedbakr27
-Mohamed Ahmed (Back-End Developer). GitHub: https://github.com/mohamed-ahmed-15
-Mohamed Medhat (Database Developer). GitHub: https://github.com/Mo7amed-Med7at
-Ahmed Kamel (Front-End Developer). GitHub: https://github.com/Kamel1bss
-Rawan Kamal (Front-End Developer). GitHub: https://github.com/rawankamal
+Mohamed Bakr (Leader, Full Stack Developer, Database Developer). GitHub: https://github.com/mohamedbakr27 \
+Mohamed Ahmed (Back-End Developer). GitHub: https://github.com/mohamed-ahmed-15 \
+Mohamed Medhat (Database Developer). GitHub: https://github.com/Mo7amed-Med7at \
+Ahmed Kamel (Front-End Developer). GitHub: https://github.com/Kamel1bss \
+Rawan Kamal (Front-End Developer). GitHub: https://github.com/rawankamal \
 Mahmound Ashraf (Front-End Developer). GitHub: https://github.com/Mahmoudashraf01
