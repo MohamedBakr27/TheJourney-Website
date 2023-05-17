@@ -1,6 +1,6 @@
 The Journey Website Project.
 
-Website that serves users to book flights online with features of saving time, saveing money and save a lot of effort.
+Website that serves users to book flights online with features of saving time, saving money and saving a lot of effort.
 
 Features:\
 -For User:
