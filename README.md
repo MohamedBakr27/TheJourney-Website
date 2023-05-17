@@ -30,7 +30,7 @@ Tools:\
 --C#\
 --Microsoft SQL Server for Database.
 
-Team:
+Team:\
 Mohamed Bakr (Leader, Full Stack Developer, Database Developer). GitHub: https://github.com/mohamedbakr27 \
 Mohamed Ahmed (Back-End Developer). GitHub: https://github.com/mohamed-ahmed-15 \
 Mohamed Medhat (Database Developer). GitHub: https://github.com/Mo7amed-Med7at \
