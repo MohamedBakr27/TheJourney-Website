@@ -17,7 +17,7 @@ Features:\
 3) See recent updates and flights.
 
 -Other Features:
-1) Responsive website on different websites.
+1) Responsive website on different devices.
 2) Dark mode features on all pages.
 3) Interact process between users and each other.
 4) Take recommendations from other users shots from feed page.
